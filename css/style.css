@@ -1,0 +1,570 @@
+/**/
+@font-face {
+  font-family: "vladdinFont";
+  src: url("font/SystemSanFranciscoDisplayUltralight.woff") format("woff"),
+       url("font/SystemSanFranciscoDisplayUltralight.ttf") format("truetype"),
+       url("font/SystemSanFranciscoDisplayUltralight.eot") format("embedded-opentype"),
+       url("font/SystemSanFranciscoDisplayUltralight.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body, p, ul, li, img, h1, h2, h3 {
+	padding: 0 ;
+	margin: 0;
+	font-family: vladdinFont;
+}
+body{
+	background-color: #e0e0e0;
+	font-size: 16px;
+}
+a {
+    color: inherit;
+}
+h2{
+	font-size: 3em;
+	color: #535a6a;
+}
+h3{
+	color: #535955;
+}
+h1, h2, h3{
+	font-weight: 100;
+}
+p{
+	color: #666666;
+}
+header{
+	background: url(../images/vladdin_06.jpg) no-repeat center;
+	background-size: cover;
+    width: 100%;
+    height: 919px;
+}
+header>div:first-child {
+    width: 100%;
+    height: 100px;
+    background-color: rgba(0,0,0,0.3);
+}
+.floatLeft{
+	float: left;
+}
+.floatRight{
+	float: right;
+}
+.clearboth{
+	clear: both;
+}
+.headFix{
+	width: 1200px;
+	margin: 0 auto;
+}
+.headFix img.leftImage{
+	padding: 34.5px 0;
+}
+.headFix nav{
+	float: right;
+	margin: 35px 0;
+}
+.headFix nav ul li{
+	padding-left: 20px;
+	list-style: none;
+	float: left;
+	color: #f6f6f6;
+	line-height: 30px;
+}
+a:hover, .headFix nav ul li:hover{
+	color: #6aa0ff;
+}
+.headTitle{
+	padding-top: 250px;
+	position:relative;
+	animation:myfirst 1s;
+	-webkit-animation:myfirst 1s; /* Safari and Chrome */
+}
+@keyframes myfirst
+{
+	0%   {left:-500px; top:0;}
+	100% {left:0; top:0;}
+}
+
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+	0%   {left:-500px; top:0;}
+	100% {left:0; top:0;}
+}
+img.midImages {
+    padding-bottom: 35px;
+    border-bottom: solid 1px;
+    border-bottom-color: rgba(246,246,246,0.5);
+}
+#design h3{
+	padding:60px 0 20px;
+	font-size: 1.25em;
+	font-weight: bold;
+}
+.headFix h1 {
+    color: rgba(246,246,246,0.8);
+    padding-top: 20px;
+    font-size: 1.875em;
+}
+.headerPstyle{
+	color: rgba(246,246,246,0.8);
+	padding-right: 40%;
+}
+.conWid3{
+	width: 35%;
+}
+.conWid3.floatLeft h2 {
+    color: #535955;
+    padding-top: 90px;
+    text-align: center;
+}
+.conWid7{
+	width: 65%;
+}
+.conWid5{
+	width: 50%;
+}
+.conWid5.floatLeft p{
+	color:#646c80;
+	padding: 20px 20px 20px 0;
+}
+.conWid5.floatRight img {
+    width: 50%;
+    display: block;
+    float: left;
+}
+article#addImaged img {
+    width: 100%;
+}
+#addImageo{
+	background: url(../images/vladdin_09.jpg) no-repeat;
+	background-size: 100%;
+}
+#addImageo .headFix{
+	padding: 200px 0;
+}
+article#addImageo h3 {
+    color: #535a6a;
+    font-size: 2.1875em;
+    padding: 60px 0 18px;
+}
+article#addImageo p {
+    font-size: 1em;
+    line-height: 25px;
+    color: #535a6a;
+}
+
+#addBackg{
+	height: 680px;
+	background-color:#0e0d12;
+	color: #535a6a;
+}
+ul.feaListone {
+    margin-left: 25px;
+}
+#addBackg h3 {
+    font-size: 2.1875em;
+    color: inherit;
+    padding-top: 20px;
+}
+#addBackg ul{
+	padding: 60px 0;
+    line-height: 25px;
+    font-size: 1.25em;
+    color: #646c80;
+}
+ul.feaListwo {
+    list-style: none;
+    column-count: 2;
+}
+#addBackg .headFix, #joinus .headFix, #addImaget .headFix, #review .headFix {
+    padding: 80px 0;
+}
+#review .headFix ul {
+    padding-top: 74px;
+    list-style: none;
+}
+#review .headFix ul li {
+    line-height: 86px;
+    padding-left: 92px;
+    padding-bottom: 63px;
+    font-size: 1.25em;
+    color: #535a6a;
+}
+#review .headFix ul li:first-child{
+	background: url(../images/vladdin_27.png) no-repeat;
+}
+#review .headFix ul li:nth-child(2){
+	background: url(../images/vladdin_30.png) no-repeat;
+	line-height: 43px;
+}
+#review .headFix ul li:last-child{
+	background: url(../images/vladdin_32.png) no-repeat;
+	padding-bottom: 0;
+}
+#addImaget{
+	background: url(../images/vladdin_30.jpg) no-repeat;
+	background-size: 100%;
+	background-color: #202022;
+}
+.nationBtn {
+    padding: 0 50px;
+}
+#joinus h2, #addImaget .headFix h2 {
+    padding-bottom: 65px;
+}
+#joinus p, #addImaget p {
+    color: #535a6a;
+}
+.conWid5.floatRight img:hover {
+    opacity: 0.8;
+}
+.goTop {
+	display: none;
+    width: 35px;
+    height: 35px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+
+.black_overlay{ 
+    display: none; 
+    position: fixed; 
+    top: 0%; 
+    left: 0%; 
+    width: 100%; 
+    height: 100%; 
+    background-color: black; 
+    z-index:1001; 
+    -moz-opacity: 0.6; 
+    opacity:.60; 
+    filter: alpha(opacity=66); 
+} 
+.white_content { 
+    display: none; 
+    position: fixed; 
+    top: 50%;
+    left: 50%;
+    width: 840px;
+    height: 543px;
+    margin-left: -420px;
+    margin-top: -270px; 
+    background:url(../images/big2.jpg) no-repeat center center;
+    background-size:cover;
+    z-index:1002; 
+    overflow: auto; 
+}
+.white_contento { 
+    display: none; 
+    position: fixed; 
+    top: 50%;
+    left: 50%;
+    width: 840px;
+    height: 543px;
+    margin-left: -420px;
+    margin-top: -270px; 
+    background:url(../images/big1.jpg) no-repeat center center;
+    background-size:cover;
+    z-index:1002; 
+    overflow: auto; 
+}
+.white_contentt { 
+    display: none; 
+    position: fixed; 
+    top: 50%;
+    left: 50%;
+    width: 840px;
+    height: 543px;
+    margin-left: -420px;
+    margin-top: -270px; 
+    background:url(../images/big3.jpg) no-repeat center center;
+    background-size:cover;
+    z-index:1002; 
+    overflow: auto; 
+}
+.white_contentf { 
+    display: none; 
+    position: fixed; 
+    top: 50%;
+    left: 50%;
+    width: 840px;
+    height: 543px;
+    margin-left: -420px;
+    margin-top: -270px; 
+    background:url(../images/big4.jpg) no-repeat center center;
+    background-size:cover;
+    z-index:1002; 
+    overflow: auto; 
+}
+
+.white_contento img, .white_contentt img, .white_contentf img, .white_content img {
+    float: right !important;
+    width: 40px !important;
+    position: relative;
+    right: 10px;
+    top: 10px;
+}
+.mobileShow{
+	display: none;
+}
+#vladdinWin {
+    background-color: #000;
+    height: 600px;
+}
+#vladdinWin .headFix img:hover{
+	transform: scale(1.02, 1.02);
+    -ms-transform: scale(1.02, 1.02);
+    -moz-transform: scale(1.02, 1.02);
+    -webkit-transform: scale(1.02, 1.02);
+    -o-transform: scale(1.02, 1.02);
+}
+#vladdinWin .headFix>div {
+	font-size: 0;
+    width: 25%;
+    overflow: hidden;
+}
+#vladdinWin .headFix>div:last-child {
+    width: 50%;
+    overflow: hidden;
+}
+#vladdinWin .headFix>div img{
+	width: 100%;
+}
+/*组图样式*/
+.slideImage{
+	display: none;
+	background-color: rgba(0,0,0,0.5);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.ban{
+	width:840px;
+	height:655px;
+	position:relative;
+	overflow:hidden;
+	margin:40px auto 0 auto;
+}
+.ban2{
+	width:840px;
+	height:543px;
+	position:relative;
+	overflow:hidden;
+}
+.ban2 ul{
+	position:absolute;
+	left:0;
+	top:0;
+}
+.ban2 ul li{
+	width:840px;
+	height:543px;
+}
+.prev{
+	float:left;
+	cursor:pointer;
+}
+.num{
+	height:102px;
+	overflow:hidden;
+	width:793px;
+	position:relative;
+	float:left;
+}
+.min_pic{
+	padding-top:10px;
+	width:840px;
+}
+.num ul{
+	position:absolute;
+	left:0;
+	top:0;
+}
+.num ul li{
+	width:153px;
+	height:100px;
+	margin-right:5px;
+	padding:1px;
+}
+.num ul li.on{
+	border:1px solid #f9f9f9;
+	padding:0;
+}
+.prev_btn1{
+	width:16px;
+	text-align:center;
+	height:18px;
+	margin-top:40px;
+	margin-right:6px;
+	cursor:pointer;
+	float:left;
+}
+.next_btn1{
+	width:16px;
+	text-align:center;
+	height:18px;
+	margin-top:40px;
+	cursor:pointer;
+	float:right;
+}
+.prev1{
+	background-image: url(../images/tubiaoz.png);
+	background-position: 0 -40px;
+	position:absolute;
+	top:220px;
+	width:36px;
+	height:51px;
+	z-index:9;
+	cursor:pointer;
+}
+.next1{
+	background-image: url(../images/tubiaoz.png);
+	background-position: 0 -81px;
+	position:absolute;
+	top:220px;
+	right:0;
+	width:36px;
+	height:51px;
+	z-index:9;
+	cursor:pointer;
+}
+.closeBtn{
+	background-image: url(../images/tubiaoz.png);
+	position:absolute;
+	top:5px;
+	right:5px;
+	width:36px;
+	height:40px;
+	z-index:9;
+	cursor:pointer;
+}
+@media screen and (max-width: 1199px){
+	.headFix{
+		width: 96% ;
+		margin: 0 2%;
+	}
+	.headTitle {
+    	padding: 19vh 0;
+	}
+	#addBackg ul, #addBackg .headFix, #joinus .headFix, #addImaget .headFix, #review .headFix, #addImageo .headFix{
+		padding: 50px 0;
+	}
+	article#addImageo h3{
+		padding: 0;
+	}
+	#addBackg{
+		height: 550px;
+	}
+	#joinus h2, #addImaget .headFix h2{
+		padding:0;
+	}
+	#review .headFix ul{
+		padding-top: 30px;
+	}
+	#vladdinWin {
+	    background-color: initial;
+	    height: initial;
+	}
+	#vladdinWin .headFix {
+	    width: 100%;
+	    margin: 0;
+	}
+}
+
+@media screen and (max-width: 1023px){
+	body{
+		font-size: 12px;
+	}
+	.headTitle {
+    	padding: 80px 0;
+	}
+	img.midImages{
+		width: 50%;
+	}
+	.conWid3 {
+    	height: auto;
+	}
+	#addBackg {
+    	height: 460px;
+	}
+	#review .headFix ul li:last-child {
+		line-height: 43px;
+		height: 86px;
+	}
+}
+@media screen and (max-width: 849px){
+	.white_content, .white_contento, .white_contentt, .white_contentf {
+    	margin: 0;
+    	top: 100px;
+    	width: 100%;
+    	left: 0;
+	}
+	.slideImage{
+		display: none !important;
+	}
+}
+@media screen and (max-width: 767px){
+	header{
+    	width: auto;
+    	height: auto;
+	}
+	.goTop{
+		display: block;
+	}
+	.conWid3, .conWid5, .conWid7{
+		width: 100%;
+	}
+	.headFix img.leftImage{
+		padding:10px 0;
+	}
+	.headFix nav ul li{
+		padding:0;
+		padding-right: 4px;
+	}
+	.headFix nav, img.midImages{
+		display: none;
+	}
+	.headTitle {
+		padding: 0 0 120px 0;
+	}
+	#addBackg{
+		height: 800px;
+	}
+	#review .headFix ul li {
+    	line-height: 43px;
+	}
+	header>div:first-child{
+		background-color: initial;
+	}
+	#addImageo {
+    	background-position: center;
+	}
+	#review .headFix ul li:nth-child(2) {
+    	line-height: 29px;
+	}
+	.mobileShow{
+		display: block;
+		position: absolute;
+    	right: 2%;
+    	top: 20px;
+	}
+}
+@media screen and (max-width: 499px){
+	.headTitle {
+		padding: 10px 0 60px 0;
+	}
+	.headFix h1{
+		padding: 0;
+		font-size: 1.5em;
+	}
+	#review .headFix ul li:nth-child(2) {
+    	line-height: 21px;
+	}
+	#review .headFix ul li:last-child {
+    	line-height: 29px;
+	}
+}
