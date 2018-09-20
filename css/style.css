@@ -9,31 +9,113 @@
   font-style: normal;
 }
 
-body, p, ul, li, img, h1, h2, h3 {
-	padding: 0 ;
+pre,textarea {
+	overflow: auto
+}
+
+dialog,dialog::backdrop {
+	left: 0;
+	bottom: 0;
+	right: 0
+}
+
+blockquote,body,dd,dir,dl,fieldset,figure,form,h1,h2,h3,h4,h5,h6,hr,input,legend,menu,ol,optgroup,p,pre,tbody,td,textarea,tfoot,th,thead,ul {
 	margin: 0;
-	font-family: vladdinFont;
+	padding: 0
 }
-body{
-	background-color: #e0e0e0;
-	font-size: 16px;
+
+ol,ul {
+	list-style-type: none;
+	list-style-image: none
 }
+
 a {
-    color: inherit;
+	text-decoration: none
 }
-h2{
-	font-size: 3em;
-	color: #535a6a;
+
+a:active {
+	background-color: transparent
 }
-h3{
-	color: #535955;
+
+a:active,a:hover {
+	outline: 0
 }
-h1, h2, h3{
-	font-weight: 100;
+
+a:focus {
+	outline: dotted 1px
 }
-p{
-	color: #666666;
+
+html {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+	font-size: 62.5%
 }
+
+body {
+	line-height: 1.8
+}
+
+body,button,input,select,textarea {
+	font-family: 'helvetica neue',tahoma,'hiragino sans gb',stheiti,'wenquanyi micro hei',\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif;
+	-ms-text-autospace: ideograph-alpha ideograph-numeric ideograph-parenthesis;
+	text-autospace: ideograph-alpha ideograph-numeric ideograph-parenthesis
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-weight: 400
+}
+
+h1 {
+	font-size: 36px
+}
+
+h2 {
+	font-size: 30px
+}
+
+h3 {
+	font-size: 22px
+}
+
+h4 {
+	font-size: 18px
+}
+
+h6 {
+	font-size: 12px
+}
+
+abbr,acronym {
+	border-bottom: 1px dotted;
+	cursor: help
+}
+
+b,strong {
+	font-weight: 700
+}
+
+dfn {
+	font-style: italic
+}
+
+hr {
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	height: 0
+}
+
+mark {
+	background-color: #D2E5FF;
+	color: #000
+}
+
+code,kbd,pre,samp {
+	font-family: monaco,menlo,consolas,'courier new',courier,monospace
+}
+
+
+
 header{
 	background: url(../images/vladdin_06.jpg) no-repeat center;
 	background-size: cover;
