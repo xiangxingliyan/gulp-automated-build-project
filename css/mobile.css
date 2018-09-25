@@ -249,6 +249,11 @@
         width: 90%;
     }
 
+    .mjfullpage-items{
+        min-height: 568px!important;
+    }
+
+
 }
 
 
