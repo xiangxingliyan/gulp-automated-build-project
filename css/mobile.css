@@ -82,6 +82,10 @@
     .feature .wrapper {
         margin-top: 90px;
     }
+
+    .design-p-img{
+        top: 26%;
+    }
 }
 
 @media screen and (max-width: 767px){
@@ -146,6 +150,11 @@
         width: 50%;
         margin-bottom: 20px;
     }
+
+    .mjfullpage-items{
+        min-height: 700px!important;
+    }
+
 }
 
 @media screen and (max-width: 640px){

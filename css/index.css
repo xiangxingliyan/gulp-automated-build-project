@@ -67,7 +67,6 @@
 .design .aside-img, .feature .aside-img, .parameter .aside-img{
     width: 66.8%;
     position: relative;
-    overflow: hidden;
 }
 
 .design .words, .feature .words, .parameter .words {
