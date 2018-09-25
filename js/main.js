@@ -50,6 +50,8 @@ $(function () {
         suitSwiper.slideToLoop(index);
     });
 
+
+
     /* jq实现锚点动画效果 */
     $('a[href*=#],area[href*=#]').click(function() {
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
@@ -65,5 +67,29 @@ $(function () {
             }
         }
     });
+
+    //初始化skrollr
+    skrollr.init({
+        constants:{
+        },
+        smoothScrollingDuration:500,
+        smoothScrolling:true,
+        forceHeight:false,
+        edgeStrategy: 'set',
+        mobileCheck: function() {
+            //return (/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera);
+            return false;
+        },
+        easing: {
+            vibrate: function(p) {
+                return Math.sin(p * 10 * Math.PI);
+            },
+            easeOutElasticBig: function(p) {
+                return 56*(p*p*p*p*p) - 175*(p*p*p*p) + 200*(p*p*p) - 100*(p*p) + 20*p;
+            }
+        }
+    });
+
+
 
 });

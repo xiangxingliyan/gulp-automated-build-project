@@ -14,6 +14,7 @@
 	<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
 	<link rel="stylesheet" type="text/css" href="css/common.css">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/wangfullpage.css">
 	<link rel="stylesheet" type="text/css" href="css/mobile.css">
 	
 </head>
@@ -61,9 +62,9 @@
 					<p class="text">创新封闭式即抛型烟弹，无须另外注烟油，用完直接更换烟弹，全方位保证烟油不受污染，也省去了手动注油的繁琐步骤，Vladdin 精选美国和加拿大进口离子化尼古丁盐烟油，符合美国 FDA（食品药品监督管理局）标准，不含焦油、一氧化碳，口感细腻柔和，从源头上保证完美替烟体验。</p>
 				</div>
 				
-				<div class="aside-img f-left">
+				<div class="aside-img f-left" id="design-img-box">
 					<img src="images/design-bg.jpg" alt="vladdin,瓦拉丁,电子烟,烟弹">
-					<img src="images/design-img.png" alt="vladdin,瓦拉丁,电子烟,烟弹design-img" class="design-p-img">
+					<img src="images/design-img.png" data-anchor-target="#design-img-box" data-top-bottom="margin-top:0;" data-bottom-top="margin-top:-100px;"  alt="vladdin,瓦拉丁,电子烟,烟弹design-img" class="design-p-img">
 				</div>
 				
 			</div>
@@ -94,15 +95,31 @@
 		
 		<!-- feature -->
 		<div class="feature" id="feature">
-			<div class="wrapper w-1360 clearfix">
-				
-				<div class="words f-right">
-					<h3 class="title">尼古丁盐技术</h3>
-					<div class="text">普通电子烟油中含的“游离碱”尼古丁，具有易挥发的特性，不易被吸收，因此带来的尼古丁满足感不足；Vladdin 使用的是来自美国和加拿大的尼古丁盐，是尼古丁与有机成分的结合物，更稳定的存在形式，由此在电子烟油加热雾化的过程中，尼古丁盐挥发更少，更容易被吸收，仅需数口，便可带来比普通烟油高出数倍的尼古丁满足感。</div>
+			<div class="Js-mjfullpage ">
+				<div class="mjfullpage-items">
+					<div class="wrapper w-1360 clearfix">
+						<div class="words f-right">
+							<h3 class="title">尼古丁盐技术</h3>
+							<div class="text">普通电子烟油中含的“游离碱”尼古丁，具有易挥发的特性，不易被吸收，因此带来的尼古丁满足感不足；Vladdin 使用的是来自美国和加拿大的尼古丁盐，是尼古丁与有机成分的结合物，更稳定的存在形式，由此在电子烟油加热雾化的过程中，尼古丁盐挥发更少，更容易被吸收，仅需数口，便可带来比普通烟油高出数倍的尼古丁满足感。</div>
+						</div>
+						
+						<div class="aside-img f-left">
+							<img src="images/feature-bg-01.jpg" alt="vladdin,瓦拉丁,电子烟,烟弹">
+						</div>
+					</div>
 				</div>
 				
-				<div class="aside-img f-left">
-					<img src="images/feature-bg.jpg" alt="vladdin,瓦拉丁,电子烟,烟弹">
+				<div class="mjfullpage-items">
+					<div class="wrapper w-1360 clearfix">
+						<div class="words f-right">
+							<h3 class="title">陶瓷芯技术</h3>
+							<div class="text">Vladdin 使用专利多孔陶瓷作为导油发热材质。陶瓷产芯具有耐摔、耐磨、超强、超硬、耐高温、超耐腐蚀、永不生锈、抗氧化、绝缘、自身具有润滑等优异性能，能保证发热速度的情况下，发热面积更大，口味还原更浓郁，尼古丁入喉的时候有着香烟的真实口感，同时柔顺舒适。</div>
+						</div>
+						
+						<div class="aside-img f-left">
+							<img src="images/feature-bg-02.jpg" alt="vladdin,瓦拉丁,电子烟,烟弹">
+						</div>
+					</div>
 				</div>
 				
 				
@@ -213,7 +230,6 @@
 					<li class="public">
 						<p class="title">公众号</p>
 						<div class="info">
-							<p class="sub-title">雾神瓦拉丁</p>
 							<div class="public-way">
 								<a href="https://weibo.com/u/6450138461?refer_flag=1001030101" target="_blank" class="sina public-link">
 									<img src="images/sina-icon.png" alt="vladdin,瓦拉丁,电子烟,烟弹">
@@ -231,10 +247,12 @@
 					<li class="address">
 						<p class="title">公司地址</p>
 						<div class="info">
-							<p class="sub-title">深圳四十大道商务有限公司</p>
+							<p class="sub-title">深圳四十大道电子商务有限公司</p>
 							<div class="address-text">
-								<p>深圳市宝安区</p>
-								<p>隆昌路飞扬科技园</p>
+								<a href="http://api.map.baidu.com/marker?location=22.5799,113.930863&title=深圳四十大道电子商务有限公司&content=深圳市宝安区宝城67区隆昌路8号飞扬科技园A栋4层&output=html&src=webapp.baidu.openAPIdemo" target="_blank" rel="nofollow">
+									<p>深圳市宝安区宝城67区</p>
+									<p>隆昌路8号飞扬科技园A栋4层</p>
+								</a>
 							</div>
 						</div>
 					</li>
@@ -256,6 +274,8 @@
 	
 	<script src="js/jquery-1.8.3.min.js"></script>
 	<script src="js/swiper.min.js"></script>
+	<script src="js/wangfullpage.js"></script>
+	<script src="js/skrollr.min.js"></script>
 	<script src="js/main.js"></script>
 	
 	

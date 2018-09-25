@@ -20,10 +20,6 @@ a:active,a:hover {
     outline: 0
 }
 
-a:focus {
-    outline: dotted 1px
-}
-
 html {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;

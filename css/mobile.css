@@ -78,6 +78,10 @@
     .footer-wrapper{
         padding: 60px 40px 145px;
     }
+
+    .feature .wrapper {
+        margin-top: 90px;
+    }
 }
 
 @media screen and (max-width: 767px){
