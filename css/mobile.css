@@ -80,7 +80,7 @@
     }
 
     .feature .wrapper {
-        margin-top: 90px;
+        margin-top: 80px;
     }
 
     .design-p-img{
@@ -151,9 +151,6 @@
         margin-bottom: 20px;
     }
 
-    .mjfullpage-items{
-        min-height: 700px!important;
-    }
 
 }
 
@@ -223,7 +220,7 @@
         height: 3px;
     }
 
-    .words .text{
+    .words .text, .feature .words .text{
         font-size: 14px;
     }
 
@@ -234,6 +231,22 @@
 
     .feature .words .title, .parameter .words .title, .design .words .title {
         font-size: 30px;
+    }
+
+    .feature .words .text{
+        margin-top: 15px;
+    }
+
+    .feature .words{
+        padding-bottom: 0;
+    }
+
+    .feature .aside-img{
+        text-align: center;
+    }
+
+    .feature .aside-img img{
+        width: 90%;
     }
 
 }
