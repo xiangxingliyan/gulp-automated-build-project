@@ -147,6 +147,10 @@
         margin-bottom: 20px;
     }
 
+    .header .nav li a:after{
+        bottom: -1px;
+    }
+
 
 }
 
