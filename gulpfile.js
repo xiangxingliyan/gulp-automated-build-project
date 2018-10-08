@@ -1,20 +1,20 @@
 //引入gulp及各种组件;
 'use strict';
 var gulp = require('gulp'),
-    uglify = require('gulp-uglify'),
-    minifyCSS = require('gulp-clean-css'),
-    gulpSequence = require('gulp-sequence'),
-    rename = require('gulp-rename'),
-    cached = require('gulp-cached'),
-    fontspider = require('gulp-font-spider'),
-    imagemin = require('gulp-imagemin'),
-    rev = require('gulp-rev'),
-    revCollector = require('gulp-rev-collector'),
-    plumber = require('gulp-plumber'),
-    merge = require('merge-stream'),
-    imageminJpegRecompress = require('imagemin-jpeg-recompress'),
-    imageminOptipng = require('imagemin-optipng'),
-    browserSync = require('browser-sync').create();
+    uglify = require('gulp-uglify'),                                //压缩js
+    minifyCSS = require('gulp-clean-css'),                          //压缩css
+    gulpSequence = require('gulp-sequence'),                        //按顺序执行任务，不能省略return
+    rename = require('gulp-rename'),                                //重命名
+    cached = require('gulp-cached'),                                //缓存
+    fontspider = require('gulp-font-spider'),                       //字蛛，中文字体压缩，.html文件加入文字时需执行
+    imagemin = require('gulp-imagemin'),                            //图片压缩
+    rev = require('gulp-rev'),                                      //版本号
+    revCollector = require('gulp-rev-collector'),                   //在html中更改版本号路径
+    plumber = require('gulp-plumber'),                              //插件发生错误导致进程退出并输出错误日志
+    merge = require('merge-stream'),                                //合并流
+    imageminJpegRecompress = require('imagemin-jpeg-recompress'),   //jpg图片压缩
+    imageminOptipng = require('imagemin-optipng'),                  //png图片压缩
+    browserSync = require('browser-sync').create();                 //浏览器自动刷新
 
 //设置各种输入输出文件夹的位置;
 var SRC_DIR = './src/',
@@ -43,7 +43,10 @@ gulp.task('script', function() {
         .pipe(rename({
             suffix: '.min'
         }))
-        .pipe(gulp.dest(PUB_DIR_SCRIPT));
+        .pipe(rev())                //添加版本号
+        .pipe(gulp.dest(PUB_DIR_SCRIPT))
+        .pipe(rev.manifest())       //根据版本号生成rev-manifest.json
+        .pipe(gulp.dest('src/rev/js'));
 
     //已压缩文件复制
     var script_min =  gulp.src(SRC_DIR_MIN_SCRIPT)
@@ -59,17 +62,23 @@ gulp.task('css', function() {
     var css = gulp.src([SRC_DIR_CSS,'!' + SRC_DIR_MIN_CSS])
         .pipe(cached('css'))
         .pipe(minifyCSS())
-        .pipe(rename({
-            suffix: '.min'
-        }))
-        .pipe(gulp.dest(PUB_DIR_CSS));
+        .pipe(rename({suffix: '.min'}))
+        .pipe(rev())
+        .pipe(gulp.dest(PUB_DIR_CSS))
+        .pipe(rev.manifest())
+        .pipe(gulp.dest('src/rev/css'));
 
     var css_min = gulp.src(SRC_DIR_MIN_CSS)
-        .pipe(gulp.dest(PUB_DIR_CSS));
+        .pipe(rev())
+        .pipe(gulp.dest(PUB_DIR_CSS))
+        .pipe(rev.manifest())
+        .pipe(gulp.dest('src/rev/css'));
 
     return merge(css, css_min);
 
 });
+
+//CSS生成文件hash编码并生成 rev-manifest.json文件名对照映射
 
 
 //SASS文件输出CSS,天生自带压缩特效;
@@ -115,6 +124,14 @@ gulp.task('html', function() {
         .pipe(gulp.dest(PUB_DIR));
 });
 
+//Html替换css、js文件版本
+gulp.task('revHtml', function () {
+    return gulp.src(['src/rev/**/*.json','src/**/*.html'])
+        .pipe(revCollector())
+        .pipe(gulp.dest(SRC_DIR))
+})
+
+
 //复制字体文件
 gulp.task('font', function() {
     return gulp.src(SRC_DIR_FONT)
@@ -133,7 +150,7 @@ gulp.task('fontspider', function() {
 //服务器任务:以public文件夹为基础,启动服务器;
 //命令行使用gulp server启用此任务;
 gulp.task('server', function() {
-    browserSync.init({
+    return browserSync.init({
         server: PUB_DIR
     });
 });
@@ -142,8 +159,16 @@ gulp.task('server', function() {
 //监控改动并自动刷新任务;
 //命令行使用gulp auto启动;
 gulp.task('auto', function() {
-    gulp.watch(SRC_DIR_SCRIPT, ['script']);
-    gulp.watch(SRC_DIR_CSS, ['css']);
+    gulp.watch(SRC_DIR_SCRIPT, function (event) {
+        gulpSequence('script','revHtml')(function (err) {
+            if (err) console.log(err)
+        })
+    });
+    gulp.watch(SRC_DIR_CSS, function(event){
+        gulpSequence('css','revHtml')(function (err) {
+            if (err) console.log(err)
+        })
+    });
     /*gulp.watch(srcSass, ['sass']);*/
     gulp.watch(SRC_DIR_IMAGE, ['imgmin']);
     gulp.watch(SRC_DIR_HTML, ['html']);
@@ -153,4 +178,4 @@ gulp.task('auto', function() {
 
 
 //gulp默认任务(); 圆括号中顺序执行，中括号同时执行
-gulp.task('default', gulpSequence(['script', 'css', 'imgmin' ],'html' ,'server','auto'));
+gulp.task('default', gulpSequence(['script', 'css', 'imgmin' ],'revHtml', 'html' ,'server','auto'));

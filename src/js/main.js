@@ -1,7 +1,6 @@
 $(function () {
 
     var homeBannerSwiper = new Swiper ('.home-banner', {
-
         autoplay: {
             delay: 4000,
             stopOnLastSlide: false,
@@ -50,8 +49,6 @@ $(function () {
         suitSwiper.slideToLoop(index);
     });
 
-
-
     /* jq实现锚点动画效果 */
     $('a[href*=#],area[href*=#]').click(function() {
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
@@ -68,7 +65,7 @@ $(function () {
         }
     });
 
-    //初始化skrollr
+    //初始化skrollr插件
     skrollr.init({
         constants:{
         },

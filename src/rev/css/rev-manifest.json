@@ -1,7 +1,3 @@
 {
-  "common.css": "common.css?v=3ba03fe1fe",
-  "index.css": "index.css?v=41a2dcef19",
-  "mobile.css": "mobile.css?v=e7c12e1831",
-  "style.css": "style.css?v=03055e8ae3",
-  "wangfullpage.css": "wangfullpage.css?v=5a13ab18e0"
+  "mobile.min.css": "mobile.min.css?v=877ac672a9"
 }
