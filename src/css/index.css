@@ -515,7 +515,8 @@
 img.ceramic-p-img {
     position: absolute;
     top: 28%;
-    left: 0;
+    left: 22%;
+    max-width: 55.28%;
 }
 
 .copyright{
