@@ -508,8 +508,9 @@
 
 .nicotine-p-img {
     position: absolute;
-    top: 16%;
-    left: 0;
+    top: 24%;
+    left: 26%;
+    max-width: 30.61%;
 }
 
 img.ceramic-p-img {
