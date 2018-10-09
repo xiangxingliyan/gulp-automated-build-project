@@ -8,6 +8,7 @@ var gulp = require('gulp'),
     cached = require('gulp-cached'),                                //缓存
     fontspider = require('gulp-font-spider'),                       //字蛛，中文字体压缩，.html文件加入文字时需执行
     imagemin = require('gulp-imagemin'),                            //图片压缩
+    assetRev = require('gulp-asset-rev'),                           //为css中引入的图片/字体等添加hash编码
     rev = require('gulp-rev'),                                      //版本号
     revCollector = require('gulp-rev-collector'),                   //在html中更改版本号路径
     plumber = require('gulp-plumber'),                              //插件发生错误导致进程退出并输出错误日志
@@ -61,6 +62,7 @@ gulp.task('css', function() {
 
     var css = gulp.src([SRC_DIR_CSS,'!' + SRC_DIR_MIN_CSS])
         .pipe(cached('css'))
+        .pipe(assetRev())
         .pipe(minifyCSS())
         .pipe(rename({suffix: '.min'}))
         .pipe(rev())
@@ -91,8 +93,16 @@ gulp.task('css', function() {
         .pipe(gulp.dest(dstSass));
 });*/
 
+//为css中引入的图片/字体等添加hash编码
+/*gulp.task('assetRev', function(){
+    return gulp.src(SRC_DIR_CSS)   //该任务针对的文件
+        .pipe(assetRev())  //该任务调用的模块
+        .pipe(gulp.dest(PUB_DIR_CSS)); //编译后
+    // 的路径
+});*/
 
-//图片压缩任务,支持JPEG、PNG及GIF文件;
+
+//图片压缩任务,支持JPEG、PNG及GIF文件,图片加入版本号;
 //命令行使用gulp jpgmin启用此任务;
 gulp.task('imgmin', function() {
     var jpgmin = imageminJpegRecompress({
@@ -111,10 +121,13 @@ gulp.task('imgmin', function() {
 
     return gulp.src(SRC_DIR_IMAGE)
         .pipe(cached('imgmin'))
+        .pipe(rev())
         .pipe(imagemin({
             use: [jpgmin, pngmin]
         }))
-        .pipe(gulp.dest(PUB_DIR_IMAGE));
+        .pipe(gulp.dest(PUB_DIR_IMAGE))
+        .pipe(rev.manifest())
+        .pipe(gulp.dest('src/rev/image'));
 });
 
 //把所有html页面扔进public文件夹(不作处理);
@@ -124,7 +137,7 @@ gulp.task('html', function() {
         .pipe(gulp.dest(PUB_DIR));
 });
 
-//Html替换css、js文件版本
+//Html替换css、js、image文件版本
 gulp.task('revHtml', function () {
     return gulp.src(['src/rev/**/*.json','src/**/*.html'])
         .pipe(revCollector())
