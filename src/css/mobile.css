@@ -172,6 +172,10 @@
         width: 150px;
     }
 
+    .copyright{
+        padding: 10px 0;
+    }
+
     .footer-service ul li .title{
         font-size: 17px;
         background-position: left 3px;
