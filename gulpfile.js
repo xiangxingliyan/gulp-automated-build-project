@@ -185,10 +185,10 @@ gulp.task('auto', function() {
     /*gulp.watch(srcSass, ['sass']);*/
     gulp.watch(SRC_DIR_IMAGE, ['imgmin']);
     gulp.watch(SRC_DIR_HTML, ['html']);
-/*    gulp.watch(PUB_DIR_HTML, ['fontspider']);*/
+    gulp.watch(PUB_DIR_HTML, ['fontspider']);
     gulp.watch(PUB_DIR + '**/*.*').on('change', browserSync.reload);
 });
 
 
 //gulp默认任务(); 圆括号中顺序执行，中括号同时执行
-gulp.task('default', gulpSequence(['script', 'css', 'imgmin' ],'revHtml', 'html' ,'server','auto'));
+gulp.task('default', gulpSequence(['script', 'css', 'imgmin' ],'revHtml', 'html','fontspider','server','auto'));
