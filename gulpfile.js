@@ -157,7 +157,7 @@ gulp.task('font', function() {
 // fontspider任务，在public中压缩字体文件并替换。
 gulp.task('fontspider', function() {
     return gulp.src(PUB_DIR_HTML)  //只要告诉它html文件所在的文件夹就可以了
-        .pipe(fontspider());
+        .pipe(fontspider())
 });
 
 //服务器任务:以public文件夹为基础,启动服务器;
@@ -183,7 +183,12 @@ gulp.task('auto', function() {
         })
     });
     /*gulp.watch(srcSass, ['sass']);*/
-    gulp.watch(SRC_DIR_IMAGE, ['imgmin']);
+    gulp.watch(SRC_DIR_IMAGE, function (event) {
+        gulpSequence('imgmin','revHtml')(function (err) {
+            if (err) console.log(err)
+        })
+    });
+
     gulp.watch(SRC_DIR_HTML, ['html']);
     gulp.watch(PUB_DIR_HTML, ['fontspider']);
     gulp.watch(PUB_DIR + '**/*.*').on('change', browserSync.reload);
