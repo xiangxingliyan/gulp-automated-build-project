@@ -267,12 +267,12 @@
     }
 
     .words .sub-title {
-        font-size: 16px;
+        font-size: 14px;
         margin-top: 10px;
     }
 
     .feature .words .title, .parameter .words .title, .design .words .title {
-        font-size: 24px;
+        font-size: 20px;
     }
 
     .feature .words .text{
