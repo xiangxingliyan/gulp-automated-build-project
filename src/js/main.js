@@ -39,7 +39,7 @@ $(function () {
         $textItem.eq(index).addClass('on').removeClass('hide').siblings('li').removeClass('on').addClass('hide');
         setTimeout(function () {
             $textItem.removeClass('hide');
-        },1000);
+        },100);
     }
 
     $('.suit-info .color-list li').click(function () {
