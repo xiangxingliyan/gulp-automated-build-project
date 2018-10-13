@@ -18,8 +18,8 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync').create();                 //浏览器自动刷新
 
 //设置各种输入输出文件夹的位置;
-var SRC_DIR = './src/',
-    PUB_DIR = './public/',
+var SRC_DIR = 'src/',
+    PUB_DIR = 'public/',
     SRC_DIR_SCRIPT = SRC_DIR + 'js/*.js',
     SRC_DIR_MIN_SCRIPT = SRC_DIR + 'js/*.min.js',
     SRC_DIR_CSS = SRC_DIR + 'css/*.css',
