@@ -224,6 +224,11 @@
     overflow: hidden;
 }
 
+/* small smoke */
+.small-smoke-list.taste-list li a{
+    width: 79.415%;
+}
+
 .suit-info {
     padding-left: 40px;
     padding-top: 90px;
