@@ -189,7 +189,13 @@ gulp.task('auto', function() {
         })
     });
 
-    gulp.watch(SRC_DIR_HTML, ['html']);
+    gulp.watch(SRC_DIR_HTML, function (event) {
+        gulpSequence('revHtml','html')(function (err) {
+            if (err) console.log(err)
+        })
+    });
+
+    // gulp.watch(SRC_DIR_HTML, ['html']);
     // gulp.watch(PUB_DIR_HTML, ['fontspider']);
     gulp.watch(PUB_DIR + '**/*.*').on('change', browserSync.reload);
 });
