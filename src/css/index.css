@@ -34,7 +34,7 @@
 
 .header .nav{
     float: right;
-    font-family: 'PingFang-Medium';
+
 }
 
 .header .nav li {
@@ -100,6 +100,10 @@
     position: relative;
 }
 
+.design .words .title{
+    font-size: 70px;
+}
+
 .design .words, .feature .words, .parameter .words {
     width: 33.2%;
 }
@@ -138,10 +142,9 @@
 }
 
 .words .title{
-    font-size: 80px;
+    font-size: 60px;
     position: relative;
     padding-bottom: 10px;
-    font-family: PingFang-Regular;
 }
 
 .words .title:after {
@@ -158,28 +161,21 @@
     font-size: 24px;
     margin-top: 25px;
     margin-bottom: 5px;
-    font-family: 'PingFang-Medium';
 }
 
 .words .text{
     font-size: 16px;
-    color: #666;
+    color: #777;
+
 }
 
 /* 参数 */
-.parameter .words .title{
-    font-size: 50px;
-}
 
 .parameter .words .title:after{
     content: none;
 }
 
 /* feature */
-.feature .words .title{
-    font-size: 50px;
-}
-
 .feature .words .text {
     font-size: 16px;
     color: #666;
@@ -219,14 +215,9 @@
 
 .taste-list li a {
     display: block;
-    width: 79%;
+    width: 79.415%;
     margin: 0 auto;
     overflow: hidden;
-}
-
-/* small smoke */
-.small-smoke-list.taste-list li a{
-    width: 79.415%;
 }
 
 .suit-info {
@@ -372,7 +363,6 @@
     background-color: #414141;
     color: #dddddd;
     font-size: 14px;
-    font-family: 'PingFang-Medium';
 }
 
 .address-text a{

@@ -53,7 +53,7 @@ body {
 }
 
 body,button,input,select,textarea {
-    font-family: 'PingFang-Regular','Arial',sans-serif;
+    font-family: 'PingFang-Medium','Arial',sans-serif;
     -ms-text-autospace: ideograph-alpha ideograph-numeric ideograph-parenthesis;
     text-autospace: ideograph-alpha ideograph-numeric ideograph-parenthesis
 }
