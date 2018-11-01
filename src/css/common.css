@@ -20,9 +20,20 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'PingFang-Bold';
+    src: url('../font/PingFang-Bold.eot');
+    src: url('../font/PingFang-Bold.eot?#font-spider') format('embedded-opentype'),
+    url('../font/PingFang-Bold.woff') format('woff'),
+    url('../font/PingFang-Bold.ttf') format('truetype'),
+    url('../font/PingFang-Bold.svg#PingFang-Bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 blockquote,body,dd,dir,dl,fieldset,figure,form,h1,h2,h3,h4,h5,h6,hr,input,legend,menu,ol,optgroup,p,pre,tbody,td,textarea,tfoot,th,thead,ul {
     margin: 0;
-    padding: 0
+    padding: 0;
 }
 
 ol,ul {
