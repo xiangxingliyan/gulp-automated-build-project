@@ -12,11 +12,29 @@
         float: left;
         padding-left: 20px;
     }
+
+    .suit-info .color-list li .color-box{
+        width: 60px;
+        height: 60px;
+    }
 }
+
 
 @media screen and (max-width: 1099px) {
     .words {
         padding-top: 8%;
+    }
+
+    .suit-text{
+        margin-top: 10px;
+    }
+
+    .suit-list {
+        padding: 40px;
+    }
+
+    .suit-info{
+        margin-top: 6%;
     }
 }
 
@@ -34,22 +52,18 @@
         padding: 8% 20px;
     }
 
-    .suit-info {
-        padding-left: 30px;
-    }
-
     .feature .words .title,.parameter .words .title ,.design  .words .title{
         font-size: 40px;
+    }
+
+    .suit-text {
+        margin-left: 5%;
     }
 }
 
 @media screen and (max-width: 960px) {
     .words {
         padding-top: 4%;
-    }
-
-    .suit-swiper {
-        width: 70.1%;
     }
 
     .suit-list {
@@ -59,6 +73,15 @@
     .footer-service ul li{
         padding-left: 0;
     }
+
+    .suit-text li img {
+        max-width: 90%;
+    }
+
+    .suit-info{
+        padding-bottom: 6%;
+    }
+
 }
 
 @media screen and (max-width: 870px) {
@@ -99,7 +122,7 @@
         position: absolute;
         left: 50%;
         top: 0;
-        margin-left: -75px;
+        margin-left: -65px;
     }
 
     .suit-info .color-list{
@@ -108,11 +131,23 @@
 
     .suit-info {
         padding-top: 20px;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .suit-info-content{
+        float: none;
+        width: 100%;
+    }
+
+    .suit-info .color-list li{
+        margin-right: 10px;
     }
 
     .suit-text {
         margin-top: 10px;
         min-height: 100px;
+        margin-left: 0;
     }
 
     .taste-title{
@@ -151,6 +186,10 @@
         bottom: -1px;
     }
 
+    .suit-swiper{
+        position: relative;
+        box-shadow: 0px 2px 8px rgba(3,3,3,.122);
+    }
 
 }
 
@@ -234,8 +273,7 @@
     }
 
     .suit-text li{
-        margin-left: -45px;
-        padding-top: 13px;
+        padding-top: 5px;
     }
 
     .suit-info .color-list li .color-box{
@@ -244,7 +282,15 @@
     }
 
     .suit-text li img{
-        width: 60px;
+        max-width: 140px;
+    }
+
+    .suit-info .color-list li.active .color-box{
+        border-width: 2px;
+    }
+
+    .suit-info:after{
+        border: none;
     }
 
     .suit-text li:before{
