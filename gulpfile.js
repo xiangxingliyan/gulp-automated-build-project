@@ -122,13 +122,15 @@ gulp.task('imgmin', function() {
     return gulp.src(SRC_DIR_IMAGE)
         .pipe(cached('imgmin'))
         .pipe(rev())
-        .pipe(imagemin({
-            use: [jpgmin, pngmin]
-        }))
+        // 不压缩图片
+        // .pipe(imagemin({
+        //     use: [jpgmin, pngmin]
+        // }))
         .pipe(gulp.dest(PUB_DIR_IMAGE))
         .pipe(rev.manifest())
         .pipe(gulp.dest('src/rev/image'));
 });
+
 
 //把所有html页面扔进public文件夹(不作处理);
 //命令行使用gulp html启用此任务;
@@ -203,3 +205,4 @@ gulp.task('auto', function() {
 
 //gulp默认任务(); 圆括号中顺序执行，中括号同时执行
 gulp.task('default', gulpSequence(['script', 'css', 'imgmin' ],'revHtml', 'html','server','auto'));
+

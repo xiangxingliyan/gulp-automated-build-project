@@ -412,7 +412,7 @@
     margin-bottom: 60px;
 }
 
-.footer-service ul li  {
+.footer-service > ul > li  {
     float: left;
     width: 25%;
     padding-left: 30px;
@@ -444,8 +444,8 @@
     background-position: left 7px;
     padding-left: 25px;
     position: relative;
-    padding-bottom: 20px;
-    margin-bottom: 10px;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
 }
 
 .footer-service ul li .title:after {
@@ -466,6 +466,49 @@
     font-size: 16px;
 }
 
+.cooperate .info .info-item {
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    width: 87px;
+}
+
+.cooperate .info .info-item .info-code{
+    z-index: 2;
+    -webkit-transform: scale(.85,.85);
+    -moz-transform: scale(.85,.85);
+    -ms-transform: scale(.85,.85);
+    -o-transform: scale(.85,.85);
+    transform: scale(.85,.85);
+    -webkit-transition: all .6s ease-out;
+    -moz-transition: all .6s ease-out;
+    -ms-transition: all .6s ease-out;
+    -o-transition: all .6s ease-out;
+    transition: all .6s ease-out;
+    opacity: 0;
+    width: 87px;
+    height: 91px;
+    position: absolute;
+}
+
+.cooperate .info .info-item:hover .info-code{
+    opacity: 1;
+    transform: scale(1,1);
+
+}
+
+.cooperate .info .info-item p{
+    margin-bottom: 10px;
+}
+
+.cooperate .info .info-item:first-child{
+    margin-right: 10px;
+}
+
+
+.footer-service  ul li.cooperate .info{
+    padding-left: 0;
+}
 
 .wx-code {
     position: absolute;
