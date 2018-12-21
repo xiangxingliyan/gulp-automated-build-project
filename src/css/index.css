@@ -598,3 +598,12 @@ img.ceramic-p-img {
     color: #666;
     background-color: #1d1d1d;
 }
+
+.copyright .desc {
+    max-width: 1200px;
+    margin: 0 auto 5px;
+    font-size: 14px;
+    color: #777;
+    border-bottom: 1px solid #444444;
+    padding-bottom: 5px;
+}
