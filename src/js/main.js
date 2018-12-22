@@ -4,7 +4,6 @@ $(function () {
         autoplay: {
             delay: 4000,
             stopOnLastSlide: false,
-            disableOnInteraction: false,
         },
         loop: true,
         speed: 1000,
