@@ -12,6 +12,34 @@ $(function () {
         }
     });
 
+    var suitSwiper =  new Swiper ('.suit-swiper', {
+        autoplay: false,
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true,
+        },
+        loop: false,
+        on: {
+            slideChange: function(){
+                controlRightIconSlider(taste.elem.tasteItem,this.realIndex);
+            }
+        }
+    });
+
+    var throwingSwiper = new Swiper ('.throwing-swiper', {
+        autoplay: false,
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true,
+        },
+        loop: false,
+        on: {
+            slideChange: function(){
+                controlRightIconSlider(throwing.elem.throwingItem,this.realIndex);
+            }
+        }
+    })
+
     function controlRightIconSlider(elem,index) {
         elem.removeClass('active').eq(index).addClass('active');
     }
@@ -20,31 +48,14 @@ $(function () {
         elem: {
             tasteItem: $('#J-suit-taste-items').find('li[data-taste-id]')
         },
-        swiperInit : function () {
-            var _this = this;
-            return new Swiper ('.suit-swiper', {
-                autoplay: false,
-                effect: 'fade',
-                fadeEffect: {
-                    crossFade: true,
-                },
-                loop: false,
-                on: {
-                    slideChange: function(){
-                        controlRightIconSlider(_this.elem.tasteItem,this.realIndex);
-                    }
-                }
-            })
-        },
         iconControlClickAction: function() {
             var _this = this;
             this.elem.tasteItem.on('click',function () {
                 var index = $(this).data('tasteId');
-                _this.swiperInit().slideToLoop(index);
+                suitSwiper.slideTo(index);
             })
         },
         init: function () {
-            this.swiperInit();
             this.iconControlClickAction();
         }
     };
@@ -54,31 +65,15 @@ $(function () {
         elem: {
             throwingItem: $('#J-throwing-items').find('li[data-throwing-id]')
         },
-        swiperInit : function () {
-            var _this = this;
-            return new Swiper ('.throwing-swiper', {
-                autoplay: false,
-                effect: 'fade',
-                fadeEffect: {
-                    crossFade: true,
-                },
-                loop: false,
-                on: {
-                    slideChange: function(){
-                        controlRightIconSlider(_this.elem.throwingItem,this.realIndex);
-                    }
-                }
-            })
-        },
+
         iconControlClickAction: function() {
             var _this = this;
             this.elem.throwingItem.on('click',function () {
                 var index = $(this).data('throwingId');
-                _this.swiperInit().slideToLoop(index);
+                throwingSwiper.slideTo(index);
             })
         },
         init: function () {
-            this.swiperInit();
             this.iconControlClickAction();
         }
     };
