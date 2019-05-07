@@ -1,8 +1,3 @@
 {
-  "common.min.css": "common.min.css?v=e6134dd3f0",
-  "index.min.css": "index.min.css?v=746a97a894",
-  "mobile.min.css": "mobile.min.css?v=7a3d00a8de",
-  "style.min.css": "style.min.css?v=b72eb53abf",
-  "swiper.min.css": "swiper.min.css?v=703a5ce3da",
-  "wangfullpage.min.css": "wangfullpage.min.css?v=114622da08"
+  "mobile.min.css": "mobile.min.css?v=c8369bfa54"
 }

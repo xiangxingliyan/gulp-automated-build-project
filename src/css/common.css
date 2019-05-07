@@ -60,7 +60,8 @@ html {
 }
 
 body {
-    line-height: 1.8
+    line-height: 1.8;
+    color: #333;
 }
 
 body,button,input,select,textarea {
@@ -255,4 +256,21 @@ input[type=search] {
 
 .show{
     display: block;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.v-title{
+    font-size: 70px;
+    font-family: 'PingFang-Bold';
+    line-height: normal;
+    margin-top: 15px;
+    color: #333;
+}
+
+.v-sub-title {
+    font-size: 30px;
+    margin-bottom: 20px;
 }

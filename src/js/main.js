@@ -3,50 +3,87 @@ $(function () {
     var homeBannerSwiper = new Swiper ('.home-banner', {
         autoplay: {
             delay: 4000,
-            stopOnLastSlide: false,
+            disableOnInteraction: false
         },
         loop: true,
-        speed: 1000,
         pagination: {
             el: '.home-banner .swiper-pagination',
             clickable: true
         }
     });
 
-    var suitSwiper = new Swiper ('.suit-swiper', {
-        autoplay: true,
-        loop: true,
-        speed: 1000,
-        delay: 4000,
-        pagination: {
-            el: '.suit-swiper .swiper-pagination',
-            clickable: true
-        },
-        on: {
-            slideChange: function(){
-                controlRightIconSlider(this.realIndex);
-            }
-        }
-    });
-
-    /* 控制右侧icon切换 */
-    function controlRightIconSlider(index) {
-        var $colorItem = $('.suit-info .color-list li');
-        var $textItem = $('.suit-text').find('li');
-
-        $colorItem.eq(index).addClass('active').siblings('li').removeClass('active');
-        $textItem.eq(index).addClass('on').removeClass('hide').siblings('li').removeClass('on').addClass('hide');
-        setTimeout(function () {
-            $textItem.removeClass('hide');
-        },100);
+    function controlRightIconSlider(elem,index) {
+        elem.removeClass('active').eq(index).addClass('active');
     }
 
-    $('.suit-info .color-list li').click(function () {
-        var index = $(this).index();
+    var taste = {
+        elem: {
+            tasteItem: $('#J-suit-taste-items').find('li[data-taste-id]')
+        },
+        swiperInit : function () {
+            var _this = this;
+            return new Swiper ('.suit-swiper', {
+                autoplay: false,
+                effect: 'fade',
+                fadeEffect: {
+                    crossFade: true,
+                },
+                loop: false,
+                on: {
+                    slideChange: function(){
+                        controlRightIconSlider(_this.elem.tasteItem,this.realIndex);
+                    }
+                }
+            })
+        },
+        iconControlClickAction: function() {
+            var _this = this;
+            this.elem.tasteItem.on('click',function () {
+                var index = $(this).data('tasteId');
+                _this.swiperInit().slideToLoop(index);
+            })
+        },
+        init: function () {
+            this.swiperInit();
+            this.iconControlClickAction();
+        }
+    };
+    taste.init();
 
-        controlRightIconSlider(index);
-        suitSwiper.slideToLoop(index);
-    });
+    var throwing = {
+        elem: {
+            throwingItem: $('#J-throwing-items').find('li[data-throwing-id]')
+        },
+        swiperInit : function () {
+            var _this = this;
+            return new Swiper ('.throwing-swiper', {
+                autoplay: false,
+                effect: 'fade',
+                fadeEffect: {
+                    crossFade: true,
+                },
+                loop: false,
+                on: {
+                    slideChange: function(){
+                        controlRightIconSlider(_this.elem.throwingItem,this.realIndex);
+                    }
+                }
+            })
+        },
+        iconControlClickAction: function() {
+            var _this = this;
+            this.elem.throwingItem.on('click',function () {
+                var index = $(this).data('throwingId');
+                _this.swiperInit().slideToLoop(index);
+            })
+        },
+        init: function () {
+            this.swiperInit();
+            this.iconControlClickAction();
+        }
+    };
+    throwing.init();
+
 
     /* jq实现锚点动画效果 */
     $('a[href*=#],area[href*=#]').click(function() {

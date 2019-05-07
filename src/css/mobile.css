@@ -17,13 +17,74 @@
         width: 60px;
         height: 60px;
     }
+
+    .minor-warning-tips{
+        width: 250px;
+    }
+
+    .header .nav li{
+        font-size: 16px;
+    }
+
+    .v-title {
+        font-size: 60px;
+    }
+
+    .v-sub-title {
+        font-size: 26px;
+    }
+
+    .feature.ceramic .words, .parameter .words{
+        padding-left: 10px;
+    }
+
+    .design .words, .feature.nicotine .words{
+        padding-right: 10px;
+    }
+}
+
+@media screen and (max-width: 1199px){
+    .header .nav li{
+        padding: 0 10px;
+    }
+
+    .minor-warning-tips {
+        width: 200px;
+        margin-left: 15px;
+    }
+
+    .v-scene-title{
+        font-size: 30px;
+    }
+
+    .v-title {
+        font-size: 40px;
+    }
+
+    .v-sub-title{
+        font-size: 20px;
+    }
+
+    .throwing-list {
+        padding: 0 10px;
+    }
+
+    .store-items li{
+        margin-left: 30px;
+    }
+
+    .online-store {
+        padding: 0 10px;
+    }
+
+    .store-items{
+        padding-right: 0;
+    }
 }
 
 
 @media screen and (max-width: 1099px) {
-    .words {
-        padding-top: 8%;
-    }
+
 
     .suit-text{
         margin-top: 10px;
@@ -31,10 +92,6 @@
 
     .suit-list {
         padding: 40px;
-    }
-
-    .suit-info{
-        margin-top: 6%;
     }
 
     .footer-wrapper{
@@ -63,6 +120,71 @@
     .suit-text {
         margin-left: 5%;
     }
+}
+
+@media screen and (max-width: 1023px){
+    .header .nav,.header .logo{
+        float: left;
+        width: 100%;
+    }
+
+    .header{
+        height: 100px;
+    }
+
+    .main{
+        padding-top: 100px;
+    }
+
+    .header .nav li{
+        line-height: normal;
+        height: auto;
+        padding: 0 20px;
+    }
+
+    .v-scent-words h3 span{
+        font-size: 18px;
+    }
+
+    .v-scent-words p{
+        font-size: 14px;
+    }
+
+    .words {
+
+        padding-top: 3%;
+    }
+
+    .os-l p{
+        font-size: 28px;
+    }
+
+    .os-l, .os-r{
+        width: 100%;
+    }
+
+    .store-items {
+        float: none;
+        margin-top: 20px;
+    }
+
+    .store-items li{
+        margin-left: 0;
+        width: 33.333%;
+        padding-right: 20px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    .main>div {
+        margin-bottom: 30px;
+    }
+
+    .store-code{
+        margin: 0 auto;
+    }
+
 }
 
 @media screen and (max-width: 960px) {
@@ -114,7 +236,7 @@
 @media screen and (max-width: 767px){
     .header .nav li{
         font-size: 14px;
-        padding:0 10px;
+        padding:0 5px;
     }
 
     .suit-info,.suit-swiper {
@@ -202,13 +324,10 @@
     .footer-service {
         padding-bottom: 15px;
     }
+
 }
 
 @media screen and (max-width: 640px){
-
-    .main > div {
-        margin-bottom: 10px;
-    }
 
     .main > div.taste{
         margin: 20px 0;
@@ -216,7 +335,19 @@
 
     .footer-service ul li {
         width: 100%;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
+    }
+
+    .kol-items img,.safety-items img{
+        width: 100%;
+    }
+
+    .header{
+        height: 90px;
+    }
+
+    .main{
+        padding-top: 90px;
     }
 
     .taste-title{
@@ -231,7 +362,7 @@
         padding: 20px 10px 0;
     }
 
-    .public-way .sina img,.public-way .wx-box > img {
+    .public-way .sina img,.public-way .wx-box > img,.f-ins-box img {
         width: 30px;
     }
 
@@ -351,6 +482,7 @@
 
     .header .nav{
         padding-left: 5px;
+        margin-top: 10px;
     }
 
     .header .logo {
@@ -358,62 +490,153 @@
         padding-left: 10px;
     }
 
-}
-
-@media screen and (max-width: 590px){
-    .header .nav li {
-        padding: 0 5px;
+    .v-scent-list li{
+        width: 50%;
+        margin-bottom: 10px;
     }
 
-    .header, .header .header-wrapper{
-        height: 90px;
+    .v-scene-image img {
+        max-width: 80%;
     }
 
-    .header .logo a{
-        height: auto;
-        line-height: normal;
+    .v-scene-image {
+        text-align: center;
     }
 
-    .header .logo{
+    .v-scent-words h3 span{
+        font-size: 14px;
+        border-bottom-width: 1px;
+        padding-bottom: 0;
+        margin-bottom: 5px;
+    }
+
+    .v-scent-words p{
+        font-size: 12px;
+    }
+
+    .v-scene-title span {
+        margin-left: 10px;
+
+    }
+
+    .v-scene-title img{
+        max-width: 100px;
+    }
+
+    .v-scene-title{
+        font-size: 20px;
+        padding: 10px 0;
+    }
+
+    .v-scent-list{
+        padding: 15px 0;
+    }
+
+    .words img {
+        max-width: 100px;
+    }
+
+    .v-title {
+        font-size: 28px;
+        margin-top: 5px;
+    }
+
+    .v-sub-title{
+        font-size: 18px;
+    }
+
+    .suit-elite-taste-list{
+        padding-top: 10px;
+        margin-top: 10px;
+    }
+
+    .throwing-info, .throwing-list{
         margin-top: 20px;
     }
 
+    .partner{
+        padding: 10px 0;
+    }
+
+    .partner-items{
+        margin-top: 10px;
+    }
+
+    .partner-items img{
+        max-width: 50px;
+    }
+
+    .kol-tweets {
+        padding: 10px 0;
+    }
+
+    .kol-tweets .v-title{
+        margin: 10px 0
+    }
+
+    .kol-items {
+        margin-top: 20px;
+    }
+
+    .foreign-kol-box {
+        margin-bottom: 20px;
+    }
+
+    .os-l p {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    .store-code{
+        width: 90px;
+        height: 90px;
+    }
+
+    .store-items li{
+        padding: 0 5px;
+    }
+
+    .store-name{
+        margin-top: 10px;
+        font-size: 12px;
+    }
+
+    .header .logo > a > img{
+        width: 220px;
+    }
+
+    .minor-warning-tips{
+        width: 120px;
+        margin-left: 10px;
+    }
+
     .header .logo{
-        float: none;
-    }
-
-    .header .nav li{
-        line-height: normal;
-        height: auto;
-        font-size: 16px;
-    }
-
-    .header .nav {
-        float: left;
         margin-top: 15px;
     }
 
-    .main{
-        padding-top: 90px;
+    .header .logo a{
+        line-height: normal;
+        height: auto;
     }
+}
+
+@media screen and (max-width: 590px){
 
     .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
         bottom: 0;
     }
 }
 
-@media screen and (max-width: 550px){
-    .header .logo img{
-        width: 150px;
-    }
-}
 
 @media screen and (max-width: 374px){
-    .header .nav {
-        padding-left: 5px;
+
+
+    .header .logo > a > img{
+        width: 200px;
     }
 
-    .header .nav li{
-        font-size: 14px;
+    .minor-warning-tips {
+        width: 100px;
+        margin-left: 0;
     }
 }
