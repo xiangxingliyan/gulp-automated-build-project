@@ -65,20 +65,13 @@
         font-size: 20px;
     }
 
-    .throwing-list {
-        padding: 0 10px;
-    }
 
-    .store-items li{
+    .store-items li, .store-items li:last-child{
         margin-left: 30px;
     }
 
     .online-store {
         padding: 0 10px;
-    }
-
-    .store-items{
-        padding-right: 0;
     }
 }
 
@@ -166,16 +159,20 @@
     .store-items {
         float: none;
         margin-top: 20px;
+        padding-right: 0;
+        
     }
 
-    .store-items li{
+    .store-items li,.store-items li:last-child{
         margin-left: 0;
-        width: 33.333%;
+        width: 50%;
         padding-right: 20px;
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
     }
+
+
 
     .main>div {
         margin-bottom: 30px;
@@ -220,10 +217,6 @@
         padding: 10px!important;
     }
 
-    .suit-info{
-        padding-top: 60px;
-    }
-
     .footer-wrapper{
         padding: 60px 10px 145px;
     }
@@ -256,14 +249,15 @@
     }
 
     .suit-info {
-        padding-top: 20px;
         margin-left: 0;
         margin-top: 10px;
+        padding-top: 0;
     }
 
     .suit-info-content{
         float: none;
         width: 100%;
+        padding: 10px 0;
     }
 
     .suit-info .color-list li{
@@ -272,8 +266,8 @@
 
     .suit-text {
         margin-top: 10px;
-        min-height: 100px;
         margin-left: 0;
+        font-size: 12px;
     }
 
     .taste-title{
@@ -293,13 +287,25 @@
     }
 
     .suit-list{
-        padding: 20px;
+        padding: 10px;
     }
 
     .taste-list li {
         float: left;
         width: 50%;
         margin-top: 20px;
+    }
+
+    .foreign-kol-box, .safety-items, .domestic-kol-box{
+        padding: 0 10px;
+    }
+
+    .foreign-kol-box{
+        padding: 20px 10px;
+    }
+
+    .main .online-store{
+        padding: 30px 10px;
     }
 
     .footer-service ul li {
@@ -315,6 +321,8 @@
     .suit-swiper{
         position: relative;
         box-shadow: 0px 2px 8px rgba(3,3,3,.122);
+        text-align: center;
+        border-radius: 20px;
     }
 
     .cooperate .info .info-item p{
@@ -325,9 +333,9 @@
         padding-bottom: 15px;
     }
 
-}
-
-@media screen and (max-width: 640px){
+    .store-items li:last-child{
+        margin-left: 0
+    }
 
     .main > div.taste{
         margin: 20px 0;
@@ -352,10 +360,6 @@
 
     .taste-title{
         padding-left: 10px;
-    }
-
-    .suit-list{
-        padding: 10px;
     }
 
     .footer-wrapper {
@@ -451,7 +455,6 @@
 
     .suit-text{
         margin-top: 5px;
-        min-height: 50px;
     }
 
     .words .sub-title {
@@ -550,12 +553,9 @@
         margin-top: 10px;
     }
 
-    .throwing-info, .throwing-list{
-        margin-top: 20px;
-    }
 
     .partner{
-        padding: 10px 0;
+        padding: 15px 0;
     }
 
     .partner-items{
@@ -566,15 +566,11 @@
         max-width: 50px;
     }
 
-    .kol-tweets {
-        padding: 10px 0;
-    }
-
-    .kol-tweets .v-title{
+    .foreign-kol-box .v-title, .domestic-kol-box .v-title{
         margin: 10px 0
     }
 
-    .kol-items {
+    .foreign-kol-box {
         margin-top: 20px;
     }
 
@@ -618,6 +614,23 @@
         line-height: normal;
         height: auto;
     }
+
+    .float-window{
+        top: 20%;
+        padding: 10px 10px 5px;
+    }
+
+    .float-window p{
+        font-size: 12px;
+        margin-top: 5px;
+    }
+
+    .float-window .store-code{
+        width: 100px;
+        height: 100px;
+        padding: 0;
+    }
+
 }
 
 @media screen and (max-width: 590px){

@@ -182,14 +182,37 @@
     box-sizing: border-box;
 }
 
-.suit-info-content ul li {
+.suit-info-wrapper ul li {
     float: left;
     cursor: pointer;
     margin-bottom: 5px;
-    padding-right: 5px;
+    padding: 0px 2px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+}
+
+.float-window {
+    position: fixed;
+    right: 3%;
+    top: 13%;
+    z-index: 100;
+    padding: 25px 25px 15px;
+    background-color: #fff;
+    box-shadow: 5px 9px 13px 0px rgba(0, 0, 0, 0.2);
+}
+
+.float-window .store-code{
+    width: 190px;
+    height: 190px;
+    padding: 0;
+}
+
+.float-window p{
+    font-size: 20px;
+    margin-top: 10px;
+    text-align: center;
+    color: #000;
 }
 
 .suit-ordinary-taste-list li{
@@ -205,18 +228,26 @@
     border-top: 2px solid #dc1632;
 }
 
-.suit-info-content ul li img,.throwing-info-content ul li img{
+.suit-info-wrapper ul li img{
     -moz-transition: all 0.2s ease-in;
     -webkit-transition: all 0.2s ease-in;
     -o-transition: all 0.2s ease-in;
     transition: all 0.2s ease-in;
 }
 
-.throwing-info-content ul li{
-    cursor: pointer;
+.suit-text {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 15px;
 }
 
-.suit-info-content ul li.active img{
+.suit-info-content{
+    background-color: #f7f7f7;
+    padding: 20px 0 44px;
+}
+
+
+.suit-info-wrapper ul li.active .suit-info-content{
     box-shadow: 0 10px 40px -15px rgba(0,0,0,0.5);
     -webkit-box-shadow: 0 10px 40px -15px rgba(0,0,0,0.5);
     -moz-box-shadow: 0 10px 40px -15px rgba(0,0,0,0.5);
@@ -225,15 +256,6 @@
     -moz-transform: translateY(-3px);
 }
 
-.throwing-taste-list {
-    display: -webkit-flex;
-    display: flex;
-    justify-content: center;
-}
-
-.throwing-info ,.throwing-list{
-    margin-top: 70px;
-}
 
 .partner{
     background-color: #f7f8fa;
@@ -263,22 +285,28 @@
     float: left;
 }
 
-.kol-items{
+.foreign-kol-box{
     margin-top: 30px;
+    background-color: #f7f8fa;
 }
 
-.kol-items img {
+.foreign-kol-box img, .domestic-kol-box img {
     float: left;
     width: 50%;
 }
 
-.kol-tweets {
-    padding: 30px 0;
-    background-color: #f7f8fa;
+.foreign-kol-box{
+    padding: 30px 0 70px;
 }
 
-.kol-tweets .v-title {
+.foreign-kol-box .v-title, .domestic-kol-box .v-title {
     margin: 40px 0;
+}
+
+.main .online-store {
+    margin: 0;
+    padding: 60px 0 80px;
+    background-color: #f7f8fa;
 }
 
 .os-l,.os-r{
@@ -294,12 +322,15 @@
 
 .store-items li{
     float: left;
-    margin-left: 50px;
+}
+
+.store-items li:last-child{
+    margin-left: 100px;
 }
 
 .store-items{
     float: right;
-    padding-right: 50px;
+    padding-right: 60px;
 }
 
 .store-name {
@@ -317,6 +348,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #ffffff;
 }
 
 /* footer */
@@ -332,7 +364,7 @@
 }
 
 .footer-wrapper {
-    padding: 60px 90px 100px;
+    padding: 60px 10px 100px 50px;
     box-sizing: border-box;
 }
 
@@ -351,6 +383,10 @@
 }
 
 .footer-service > ul > li.address{
+    padding-left: 0;
+}
+
+.footer-service > ul > li.customer-service{
     padding-left: 0;
 }
 

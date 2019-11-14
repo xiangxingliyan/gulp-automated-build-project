@@ -26,19 +26,6 @@ $(function () {
         }
     });
 
-    var throwingSwiper = new Swiper ('.throwing-swiper', {
-        autoplay: false,
-        effect: 'fade',
-        fadeEffect: {
-            crossFade: true,
-        },
-        loop: false,
-        on: {
-            slideChange: function(){
-                controlRightIconSlider(throwing.elem.throwingItem,this.realIndex);
-            }
-        }
-    })
 
     function controlRightIconSlider(elem,index) {
         elem.removeClass('active').eq(index).addClass('active');
@@ -60,24 +47,6 @@ $(function () {
         }
     };
     taste.init();
-
-    var throwing = {
-        elem: {
-            throwingItem: $('#J-throwing-items').find('li[data-throwing-id]')
-        },
-
-        iconControlClickAction: function() {
-            var _this = this;
-            this.elem.throwingItem.on('click',function () {
-                var index = $(this).data('throwingId');
-                throwingSwiper.slideTo(index);
-            })
-        },
-        init: function () {
-            this.iconControlClickAction();
-        }
-    };
-    throwing.init();
 
 
     /* jq实现锚点动画效果 */
