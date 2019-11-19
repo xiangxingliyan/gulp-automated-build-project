@@ -91,6 +91,10 @@
     margin-bottom: 80px ;
 }
 
+.main > div:last-child{
+    margin-bottom: 0;
+}
+
 .main > div.suit,.main > div.home-banner{
     margin-bottom: 0;
 }
