@@ -60,8 +60,7 @@ html {
 }
 
 body {
-    line-height: 1.8;
-    color: #333;
+    color: #000;
 }
 
 body,button,input,select,textarea {
@@ -237,18 +236,12 @@ input[type=search] {
     clear: both
 }
 
-.w-1360{
+.wrapper, .w-1360{
     max-width: 1360px;
     margin: 0 auto;
 }
 
-.f-left {
-    float: left;
-}
 
-.f-right{
-    float: right;
-}
 
 .hide{
     display: none;
@@ -260,17 +253,4 @@ input[type=search] {
 
 .text-center{
     text-align: center;
-}
-
-.v-title{
-    font-size: 70px;
-    font-family: 'PingFang-Bold';
-    line-height: normal;
-    margin-top: 15px;
-    color: #333;
-}
-
-.v-sub-title {
-    font-size: 30px;
-    margin-bottom: 20px;
 }
